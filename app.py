@@ -128,4 +128,4 @@ def load_model():
 
 if __name__ == '__main__':
     threading.Thread(target=load_model).start()
-    app.run(host='0.0.0.0', port=4000, debug=False, threaded=True)
+    app.run(host='0.0.0.0', port=5001, debug=False, threaded=True)

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Gpt Ai - Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🔥 Dark Gpt Ai</div>
+            <div class="nav-links">
+                <a href="/">Accueil</a>
+                <a href="/chat" class="active">Chat</a>
+                <a href="/about">À propos</a>
+                <a href="https://github.com/syntaxe-devmessy/dark-gpt-ai" target="_blank">GitHub</a>
+            </div>
+            <div class="status" id="status">● Vérification...</div>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <div class="chat-sidebar">
+            <h3>⚙️ Paramètres</h3>
+            
+            <div class="settings-group">
+                <label>Mode</label>
+                <select id="mode">
+                    <option value="general">💬 Général</option>
+                    <option value="code" selected>💻 Code</option>
+                    <option value="debug">🔧 Debug</option>
+                    <option value="explain">📚 Explication</option>
+                </select>
+            </div>
+
+            <div class="settings-group">
+                <label>Température (créativité)</label>
+                <input type="range" id="temp" min="0.1" max="1.5" step="0.1" value="0.7">
+                <span id="temp-value">0.7</span>
+            </div>
+
+            <div class="settings-group">
+                <label>Max tokens</label>
+                <input type="number" id="max-tokens" min="100" max="1000" value="500">
+            </div>
+
+            <button class="btn btn-secondary" id="clear-btn">🗑️ Effacer la conversation</button>
+
+            <div class="model-info">
+                <p>🤖 <strong>Dolphin 2.9.1</strong></p>
+                <p>📊 7B paramètres (4-bit)</p>
+                <p>💾 RAM: ~4GB</p>
+            </div>
+        </div>
+
+        <div class="chat-main">
+            <div class="messages" id="messages">
+                <div class="message ai">
+                    <div class="avatar">🤖</div>
+                    <div class="content">
+                        Bonjour ! Je suis Dark Gpt Ai, ton assistant sans censure basé sur Dolphin 2.9.1.
+                        Pose-moi des questions sur le code ou tout autre sujet !
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Écris ton message..." rows="3"></textarea>
+                <button class="btn btn-primary" id="send-btn">🚀 Envoyer</button>
+            </div>
+
+            <div class="suggestions">
+                <button class="suggestion">Écris un jeu Snake en Python</button>
+                <button class="suggestion">Explique le deep learning</button>
+                <button class="suggestion">Débug ce code: def f(x) return x</button>
+                <button class="suggestion">Crée une API REST avec Flask</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

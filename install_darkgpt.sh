@@ -16,7 +16,7 @@ NC='\033[0m'
 # Configuration
 REPO_URL="https://github.com/syntaxe-devmessy/dark-gpt-ai.git"
 APP_DIR="$HOME/dark-gpt-ai"
-PORT=5000
+PORT=5001
 
 # Bannière
 clear
